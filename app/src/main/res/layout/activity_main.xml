@@ -15,6 +15,7 @@
             android:id="@+id/searchBar"
             android:inputType="textAutoComplete"
             android:hint="@string/search_hint"
+            android:imeOptions="actionDone"
             android:layout_width="0dp" />
 
         <ImageButton
@@ -24,23 +25,21 @@
             android:src="@drawable/search_icon"
             android:scaleType="fitXY"
             android:onClick="search"/>
-    </LinearLayout>
 
-    <ImageButton
-        android:layout_width="48sp"
-        android:layout_height="48sp"
-        android:layout_below="@id/topLayout"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/audioButton"
-        android:src="@drawable/audio_icon"
-        android:scaleType="fitXY"
-        android:onClick="playAudio"/>
+        <ImageButton
+            android:layout_width="48sp"
+            android:layout_height="45sp"
+            android:id="@+id/audioButton"
+            android:src="@drawable/audio_icon"
+            android:scaleType="fitXY"
+            android:onClick="playAudio"/>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/defList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/audioButton">
+        android:layout_below="@id/topLayout">
     </ListView>
 
 

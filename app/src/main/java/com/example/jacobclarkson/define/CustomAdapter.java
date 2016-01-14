@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,7 +22,6 @@ public class CustomAdapter extends BaseAdapter {
         TextView partOfSpeechView;
         TextView pronunciationView;
         TextView definitionsView;
-//        Button audioButton;
     }
 
     public CustomAdapter(Context context, ArrayList<Definition> definitions) {
@@ -44,7 +42,7 @@ public class CustomAdapter extends BaseAdapter {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder = null;
+        ViewHolder holder;
         if(convertView == null) {
             holder = new ViewHolder();
             convertView = inflater.inflate(R.layout.listview, null);
@@ -53,7 +51,6 @@ public class CustomAdapter extends BaseAdapter {
             holder.partOfSpeechView = (TextView) convertView.findViewById(R.id.partOfSpeech);
             holder.definitionsView = (TextView) convertView.findViewById(R.id.definitions);
             holder.pronunciationView = (TextView) convertView.findViewById(R.id.pronunciation);
-//            holder.audioButton = (Button) convertView.findViewById(R.id.audioButton);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -63,7 +60,6 @@ public class CustomAdapter extends BaseAdapter {
         holder.pronunciationView.setText(definitions.get(position).getPronunciation());
         holder.partOfSpeechView.setText(definitions.get(position).getPartOfSpeech());
         holder.definitionsView.setText(definitions.get(position).getDefinitions());
-//        holder.audioButton.setText("Audio");
         return convertView;
     }
 }
