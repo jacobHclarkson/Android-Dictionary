@@ -17,21 +17,23 @@
             android:hint="@string/search_hint"
             android:layout_width="0dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:layout_width="48sp"
+            android:layout_height="45sp"
             android:id="@+id/searchButton"
-            android:text="Search"
+            android:src="@drawable/search_icon"
+            android:scaleType="fitXY"
             android:onClick="search"/>
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:layout_width="48sp"
+        android:layout_height="48sp"
         android:layout_below="@id/topLayout"
         android:layout_centerHorizontal="true"
         android:id="@+id/audioButton"
-        android:text="Audio"
+        android:src="@drawable/audio_icon"
+        android:scaleType="fitXY"
         android:onClick="playAudio"/>
 
     <ListView

@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -30,7 +30,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 public class MainActivity extends Activity {
     ArrayList<Definition> retrieved;
     CustomAdapter customAdapter;
-    Button audioButton;
+    ImageButton audioButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
         retrieved = new ArrayList<>();
         customAdapter = new CustomAdapter(MainActivity.this, retrieved);
         listView.setAdapter(customAdapter);
-        audioButton = (Button) findViewById(R.id.audioButton);
+        audioButton = (ImageButton) findViewById(R.id.audioButton);
         audioButton.setVisibility(View.GONE);
     }
 
